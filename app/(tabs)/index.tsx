@@ -1,16 +1,14 @@
-import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { images } from "@/constants/images";
+import { Link, useRouter } from "expo-router";
+import { Image, Text, View } from "react-native";
 
 export default function Index() {
-  return (
-    <View className="flex-1  items-center justify-center ">
-      <Text className="text-5xl font-bold text-primary">
-        Welcome
-      </Text>
+  const router = useRouter()
 
-      <Link href="/onboarding">Onboarding</Link>
- 
-      <Link href="/movie/skiper">Avengers Movies</Link>
+  return (
+    <View className="flex-1 bg-primary">
+      <Image source={images.bg} className="absolutew-full z-0" />
+     
     </View>
   );
 }
